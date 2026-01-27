@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>FoodFast - Order</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #ff9800;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .menu {
+        padding: 15px;
+    }
+
+    .item {
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-name {
+        font-size: 16px;
+    }
+
+    .price {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    .add-btn {
+        background-color: #ff9800;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .add-btn:hover {
+        background-color: #e68900;
+    }
+
+    .footer {
+        background: white;
+        padding: 15px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    .order-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .order-btn:hover {
+        background-color: #43a047;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    🍔 FoodFast – สั่งอาหาร
+</div>
+
+<div class="menu">
+    <div class="item">
+        <div>
+            <div class="item-name">ข้าวผัด</div>
+            <div class="price">50 บาท</div>
+        </div>
+        <button class="add-btn">เพิ่ม</button>
+    </div>
+
+    <div class="item">
+        <div>
+            <div class="item-name">ก๋วยเตี๋ยว</div>
+            <div class="price">45 บาท</div>
+        </div>
+        <button class="add-btn">เพิ่ม</button>
+    </div>
+
+    <div class="item">
+        <div>
+            <div class="item-name">ชาเย็น</div>
+            <div class="price">30 บาท</div>
+        </div>
+        <button class="add-btn">เพิ่ม</button>
+    </div>
+</div>
+
+<div class="footer">
+    <button class="order-btn">สั่งอาหาร</button>
+</div>
+
+</body>
+</html>
