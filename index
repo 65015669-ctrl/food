@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แอพสั่งอาหาร</title>
+
+    <style>
+        body{
+            font-family: Tahoma, sans-serif;
+            background:#f2f2f2;
+            margin:0;
+            text-align:center;
+        }
+
+        header{
+            background:#ff9800;
+            color:white;
+            padding:20px;
+            font-size:24px;
+        }
+
+        .menu{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            margin-top:20px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:white;
+            width:200px;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        button{
+            background:#4CAF50;
+            color:white;
+            border:none;
+            padding:10px;
+            border-radius:5px;
+            cursor:pointer;
+            margin-top:10px;
+        }
+
+        .order{
+            background:white;
+            margin:30px auto;
+            width:300px;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🍽 แอพสั่งอาหาร
+</header>
+
+<div class="menu">
+    <div class="card">
+        <h3>ข้าวผัด</h3>
+        <p>ราคา 50 บาท</p>
+        <button onclick="addOrder('ข้าวผัด',50)">สั่ง</button>
+    </div>
+
+    <div class="card">
+        <h3>ก๋วยเตี๋ยว</h3>
+        <p>ราคา 40 บาท</p>
+        <button onclick="addOrder('ก๋วยเตี๋ยว',40)">สั่ง</button>
+    </div>
+
+    <div class="card">
+        <h3>ชาเย็น</h3>
+        <p>ราคา 25 บาท</p>
+        <button onclick="addOrder('ชาเย็น',25)">สั่ง</button>
+    </div>
+</div>
+
+<div class="order">
+    <h3>🧾 รายการที่สั่ง</h3>
+    <ul id="orderList"></ul>
+    <h4 id="total">รวมทั้งหมด: 0 บาท</h4>
+</div>
+
+<script>
+    let total = 0;
+
+    function addOrder(name, price){
+        let list = document.getElementById("orderList");
+        let item = document.createElement("li");
+        item.innerText = name + " - " + price + " บาท";
+        list.appendChild(item);
+
+        total += price;
+        document.getElementById("total").innerText =
+            "รวมทั้งหมด: " + total + " บาท";
+    }
+</script>
+
+</body>
+</html>
